@@ -1,0 +1,17 @@
+.container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:wght@400;500;700&display=swap");
+
+.logo {
+  font-size: 35px;
+  font-weight: 700; /* Use the specific weight available for the font */
+  font-family: "Pacifico", cursive; /* Apply the Montserrat font */
+  background: linear-gradient(to right, #ff9900, #ff5f6d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
