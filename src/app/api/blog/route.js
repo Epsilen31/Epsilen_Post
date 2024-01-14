@@ -1,14 +1,19 @@
+// Assuming this is the content of /api/blog/route.js
+
 import { Post } from "@/lib/model";
 import { connectDb } from "@/lib/utils";
 import { NextResponse } from "next/server";
 
-export const GET = async () => {
+const GET = async () => {
   try {
-    connectDb();
+    await connectDb();
     const posts = await Post.find();
-    return NextResponse.json(posts);
+    console.log(posts);
+    return new NextResponse({ body: posts, status: 200 });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     throw new Error("Failed to fetch posts!");
   }
 };
+
+export default GET;
